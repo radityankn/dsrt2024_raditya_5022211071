@@ -10,6 +10,6 @@ untuk verifikasi desain semikonduktor
   <li>report : file laporan hasil simulasi</li>
 </ul>
 
-Diubah terakhir : Selasa, 29 Maret 2024
-Raditya Eka Putra
-S1 Departemen Teknik Elektro ITS, Surabaya
+<br />Diubah terakhir : Selasa, 29 Maret 2024
+<br />Raditya Eka Putra
+<br />S1 Departemen Teknik Elektro ITS, Surabaya
