@@ -1,0 +1,5 @@
+* SPICE3 file created from /home/raditya/Silicons/Projects/NFET.ext - technology: sky130A
+
+.option scale=10m
+
+X0 vcc in gnd SUB sky130_fd_pr__nfet_01v8 ad=2.25n pd=0.19m as=2.475n ps=0.2m w=45 l=40

@@ -1,0 +1,14 @@
+* SPICE3 file created from /home/raditya/Silicons/Projects/inverter.ext - technology: sky130A
+
+.option scale=10m
+
+X0 out1 out1 vdd w_775_20# sky130_fd_pr__pfet_01v8 ad=2.25n pd=0.19m as=2n ps=0.18m w=50 l=15
+X1 in1 out1 vss SUB sky130_fd_pr__nfet_01v8 ad=2.025n pd=0.18m as=2.025n ps=0.18m w=45 l=15
+X2 out1 out1 vss SUB sky130_fd_pr__nfet_01v8 ad=2.025n pd=0.18m as=2.025n ps=0.18m w=45 l=15
+X3 out1 in1 vss SUB sky130_fd_pr__nfet_01v8 ad=2.025n pd=0.18m as=2.025n ps=0.18m w=45 l=15
+X4 out1 out1 vss SUB sky130_fd_pr__nfet_01v8 ad=2.025n pd=0.18m as=2.025n ps=0.18m w=45 l=15
+X5 out1 in1 vdd w_n95_20# sky130_fd_pr__pfet_01v8 ad=2.25n pd=0.19m as=2n ps=0.18m w=50 l=15
+X6 out1 out1 vdd w_195_20# sky130_fd_pr__pfet_01v8 ad=2.25n pd=0.19m as=2n ps=0.18m w=50 l=15
+X7 out1 out1 vss SUB sky130_fd_pr__nfet_01v8 ad=2.025n pd=0.18m as=2.025n ps=0.18m w=45 l=15
+X8 out1 out1 vdd w_485_20# sky130_fd_pr__pfet_01v8 ad=2.25n pd=0.19m as=2n ps=0.18m w=50 l=15
+X9 in1 out1 vdd w_1065_20# sky130_fd_pr__pfet_01v8 ad=2.25n pd=0.19m as=2n ps=0.18m w=50 l=15
