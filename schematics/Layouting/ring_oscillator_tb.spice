@@ -1,0 +1,56 @@
+** sch_path: /home/raditya/Silicons/Projects/ring_oscillator_tb.sch
+**.subckt ring_oscillator_tb
+V1 net1 GND 1.8
+C1 OUT GND 1f m=1
+x1 net1 OUT GND ring_oscillator
+**** begin user architecture code
+
+
+.option wnflag=1
+.option savecurrents
+.control
+save all
+tran 1p 10n
+plot out
+op
+.endc
+
+
+ .lib /usr/local/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+.param mc_mmm_cwitch=0
+.param mc_pr_switch=1
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/raditya/Silicons/Projects/ring_oscillator.sym # of pins=3
+** sym_path: /home/raditya/Silicons/Projects/ring_oscillator.sym
+** sch_path: /home/raditya/Silicons/Projects/ring_oscillator.sch
+.subckt ring_oscillator VDD OUT GND
+*.iopin VDD
+*.iopin GND
+*.opin OUT
+x1 VDD net2 net3 GND inverter_symbol
+x2 VDD net3 net4 GND inverter_symbol
+x3 VDD net1 net2 GND inverter_symbol
+x4 VDD net4 OUT GND inverter_symbol
+x5 VDD OUT net1 GND inverter_symbol
+.ends
+
+
+* expanding   symbol:  /home/raditya/Silicons/Projects/inverter_symbol.sym # of pins=4
+** sym_path: /home/raditya/Silicons/Projects/inverter_symbol.sym
+** sch_path: /home/raditya/Silicons/Projects/inverter_symbol.sch
+.subckt inverter_symbol VDD In Out GND
+*.ipin In
+*.opin Out
+*.iopin VDD
+*.iopin GND
+XM9 Out In GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 Out In VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL GND
+.end
